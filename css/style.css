@@ -1,0 +1,914 @@
+/*************************************\
+    @ Main Rulz
+\*************************************/
+
+
+
+body
+{
+    position: relative;
+}
+
+/* Small devices (landscape phones, 576px and up)*/
+@media (max-width: 575px) {
+    body,html
+    {
+        font-size: 0.8rem;
+    }
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+    body
+    {
+        font-size: 14px
+    }
+}
+
+/* Large devices (desktops, 992px and up)*/
+/*
+@media (min-width: 992px) {
+    body
+    {
+        font-size: 1rem;
+    }
+}
+*/
+
+
+section
+{
+    overflow: hidden;
+    position: relative;
+}
+
+.main-section
+{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.main-section p
+{
+    color: #777;
+    line-height: 1.8;
+    font-size: 0.9rem;
+}
+
+h2.title
+{
+    text-align: center;
+    text-transform: capitalize;
+}
+
+hr.title
+{
+    border: none;
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+hr.title::before
+{
+    content: '';
+    position: absolute;
+    background-color: #5A10FB;
+    width: 10px;
+    height: 10px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+}
+
+hr.title::after
+{
+    content: '';
+    position: absolute;
+    width: 130px;
+    height: 2px;
+    top: 4px;
+    background-color: #5A10FB;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+p.lead
+{
+    color: #777;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+/* owl carousel */
+.owl-theme .owl-dots .owl-dot span,
+.owl-theme .owl-dots .owl-dot.active span, 
+.owl-theme .owl-dots .owl-dot:hover span
+{
+    background: #5c1ef9;
+    opacity: 0.3;
+}
+
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span
+{
+    opacity: 1;
+}
+
+
+.btn-outline-primary
+{
+    color: #333;
+    border-color: #5A10FB;
+    text-transform: capitalize;
+}
+
+.btn-outline-primary:hover
+{
+    border-color: #5A10FB;
+    background-color: #5A10FB;
+    color: #fff;
+}
+
+/*************************************\
+    @ loading-spinner
+\*************************************/
+.loading-spinner
+{
+    background: #fff url(../img/loading2.gif) no-repeat center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 2000;
+/*    display: none;*/
+    
+}
+
+
+/*************************************\
+    @ navbar
+\*************************************/
+
+.navbar
+{
+    background-color: #5C1EF9 !important;
+}
+
+.navbar .navbar-brand
+{
+    font-weight: bold;
+    font-size: 25px;
+}
+
+@media(min-width: 992px)
+{
+    .navbar-dark .navbar-nav .nav-link
+    {
+        position: relative;
+        padding-left: 0;
+        padding-right: 1.5rem;
+        outline: none;
+    }
+
+    .navbar-dark .navbar-nav .nav-link,
+    .navbar-dark .navbar-nav .nav-link:hover,
+    .navbar-dark .navbar-nav .nav-link:focus
+    {
+        color: #fff;
+    }
+
+
+    .navbar-dark .navbar-nav .nav-link::before
+    {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        background-color: #fff;
+        left: 0;
+        top: 32px;
+        transition: all 0.3s ease-in-out;
+
+    }
+
+    .navbar-dark .navbar-nav .nav-link:hover::before,
+    .navbar-dark .navbar-nav .nav-link.active::before
+    {
+        width: 80%;
+    }
+}
+
+
+/*************************************\
+    @ header
+\*************************************/
+header
+{
+    background-color: #5D12F8;
+    padding-top: calc(150px + 63px);
+    padding-bottom: 150px;
+    color: #fff;
+}
+
+header .content h1
+{
+    text-transform: capitalize;
+    font-size: 3rem;
+    margin-bottom: 30px;
+}
+
+header .content .btn
+{
+    border: 2px solid;
+    border-radius: 40px;
+    text-transform: capitalize;
+/*    padding: 10px 30px;*/
+    display: inline-flex;
+    align-items: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+header .content .btn:hover
+{
+    color: #5c1ef9;
+    
+}
+
+header .content .btn i
+{
+    width: 50px;
+    height: 50px;
+    line-height: 46px;
+    text-align: center;
+    border: 2px solid;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+@media (min-width: 768px) 
+{
+    header .content
+    {
+        text-align: right;
+    }
+}
+
+/*************************************\
+    @ services
+\*************************************/
+
+.services
+{
+    position: relative;
+    bottom: 100px;
+    margin-bottom: -100px;
+}
+
+.services .service
+{
+    background-color: #fff;
+    border-radius: 7px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 30px 10px;
+    margin-bottom: 2rem
+}
+
+.services .service img
+{
+    margin-bottom: 1rem;
+}
+
+.services .service h2,
+.services .service p
+{
+    text-transform: capitalize;
+}
+
+.services .service p
+{
+    color: #777;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+@media(max-width: 991px)
+{
+    .services .service h2
+    {
+        font-size: 1.6rem;
+    }
+}
+
+
+/*************************************\
+    @ about
+\*************************************/
+
+.about
+{
+    
+}
+
+/*************************************\
+    @ features
+\*************************************/
+
+.features
+{
+    background-color: #f8f8f8;
+}
+
+.features .media
+{
+    margin-bottom: 2rem;
+}
+
+.features .media .icon
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #5A10FB;
+    transform: rotate(45deg);
+}
+
+.features .media .icon i
+{
+    
+    color: #5A10FB;
+    transform: rotate(-45deg);
+    font-size: 25px;
+}
+
+.features .media h3
+{
+    text-transform: capitalize;
+}
+
+/*************************************\
+    @ acheivements
+\*************************************/
+
+.acheivements
+{
+    background: url(../img/nature.jpg) center no-repeat fixed;
+    background-size: cover;
+    color: #fff;
+}
+
+.acheivements .overlay
+{
+    background-color: rgba(90, 16, 251, 0.9);
+}
+
+.acheivements i
+{
+    font-size: 24px;
+    margin-bottom: 1rem;
+}
+
+.acheivements h2
+{
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.acheivements .desc
+{
+    font-size: 1.2rem;
+    text-transform: capitalize;
+}
+
+/*************************************\
+    @ screenshot
+\*************************************/
+
+.screenshot
+{
+    position: relative;
+}
+
+.screenshot p
+{
+    margin-bottom: 100px;
+}
+
+.screenshot .screen-slider
+{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.screenshot .owl-dots
+{
+    margin-top: 80px !important;
+}
+
+
+
+@media(max-width: 767px)
+{
+    .screenshot .screen-slider
+    {
+        display: none;
+    }
+}
+
+@media(min-width: 768px)
+{
+    .screenshot .screen-slider
+    {
+        width: 518px;
+        top: 270px;
+        height: 482px;
+    }
+}
+
+
+@media(min-width: 992px)
+{
+    .screenshot .screen-slider
+    {
+        width: 424px;
+        top: 270px;
+        height: 392px;
+    }
+}
+
+
+@media(min-width: 1200px)
+{
+    .screenshot .screen-slider
+    {
+        width: 498px;
+        top: 270px;
+        height: 462px;
+    }
+}
+
+
+/*************************************\
+    @ testimonials
+\*************************************/
+
+.testimonials #testi-carousel .item
+{
+    margin-top: 100px;
+    border: 2px solid #5C1EF9;
+    border-radius: 10px;
+    position: relative;
+    padding-top: 80px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.testimonials #testi-carousel .item .img
+{
+    width: 130px;
+    height: 130px;
+    position: absolute;
+    left: 50%;
+    top: -65px;
+    transform: translate(-50%);
+    margin-bottom: 2rem;
+}
+
+.testimonials #testi-carousel .item .img img
+{
+    display: block;
+    max-width: 100%;
+    border-radius: 50%;
+    
+}
+
+.testimonials #testi-carousel .item h3
+{
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    color: #444;
+}
+
+.testimonials #testi-carousel .item span
+{
+    display: inline-block;
+    color: #777;
+    text-transform: capitalize;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.testimonials #testi-carousel .item .socials i
+{
+    color: #555;
+    font-size: 18px;
+    margin: 0 3px;
+}
+
+.testimonials .owl-dots
+{
+    margin-top: 40px !important;
+}
+
+/*************************************\
+    @ video
+\*************************************/
+
+.video
+{
+    background: url(../img/nature.jpg) center no-repeat fixed;
+    background-size: cover;
+    color: #fff;
+}
+
+.video .overlay
+{
+    background-color: rgba(90, 16, 251, 0.9);
+}
+
+.video p
+{
+    color: #fff;
+}
+
+.video .icon
+{
+    background-color: #fff;
+    color:  #5a10fb !important;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    position: relative;
+    display: inline-block;
+    margin-top: 2rem;
+    outline: none;
+}
+
+.video .icon:before,
+.video .icon:after {
+    position: absolute;
+    content: '';
+    height: 50px;
+    width: 50px;
+    top: 0%;
+    left: 0%;
+    border-radius: 50%;
+    box-shadow: 0 0 15px #fff;
+    animation: glow-grow 2s ease-out infinite;
+}
+.video .icon:after {
+  animation-delay: .66s;
+}
+
+@keyframes glow-grow {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+/* modal */
+
+.modal-dialog {
+    max-width: 800px;
+    margin: 30px auto;
+}
+.modal-body {
+    position:relative;
+    padding:0px;
+}
+.close {
+    position:absolute;
+    right:-30px;
+    top:0;
+    z-index:999;
+    font-size:2rem;
+    font-weight: normal;
+    color:#fff;
+    opacity:1;
+}
+
+/*************************************\
+    @ pricing
+\*************************************/
+
+.pricing
+{
+    
+}
+
+.pricing .card
+{
+    border: none;
+    box-shadow: 0 0 10px rgba(75, 75, 75, 0.1);
+    transition: all 0.4s ease-in-out;
+    margin-bottom: 2rem;
+}
+
+.pricing .card:hover
+{
+    border: none;
+    box-shadow: 0 0 10px rgba(75, 75, 75, 0.2);
+}
+
+.pricing .card .card-header
+{
+    background-color: #5A10FB;
+    color: #fff;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+
+.pricing .card .card-body ul
+{
+    margin-bottom: 2rem;
+}
+
+
+.pricing .card .card-body ul li
+{
+    margin-bottom: .75rem;
+    color: #777;
+}
+
+
+/*************************************\
+    @ team
+\*************************************/
+
+.team{}
+
+.team .person
+{
+    box-shadow: 0 0 10px rgba(75, 75, 75, 0.1);
+    padding: 30px 15px;
+    text-align: center;
+    transition: all 0.4s ease-in-out;
+    margin-bottom: 2rem;
+}
+
+.team .person:hover
+{
+    box-shadow: 0 0 10px rgba(75, 75, 75, 0.2);
+}
+
+.team .person img
+{
+    border-radius: 50%;
+    margin-bottom: 2rem;
+    width: 144px;
+    height: 144px;
+}
+
+.team .person h4
+{
+    color: #333;
+    text-transform: capitalize;
+}
+
+.team .person .desc
+{
+    display: inline-block;
+    color: #777;
+    text-transform: capitalize;
+    margin-bottom: 2rem;
+}
+
+.team .person .socials i
+{
+    font-size: 20px;
+    color: #555;
+    padding: 0 7px;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+
+.team .person .socials i:hover
+{
+    color: #5a10fb;
+}
+
+
+/*************************************\
+    @ team-secondary
+\*************************************/
+
+.team-secondary
+{
+    color: #fff;
+    background: url(../img/nature.jpg) center no-repeat fixed;4
+    background-size: cover;
+}
+
+.team-secondary .overlay
+{
+    background-color: rgba(90, 16, 251, 0.9);
+}
+
+.team-secondary hr.title::before,
+.team-secondary hr.title::after
+{
+    background-color: #fff;
+}
+
+.team-secondary .lead
+{
+    color: #fff;
+}
+
+.team-secondary .btn-outline-light
+{
+    border: 2px solid #fff;
+    font-weight: bold;
+    padding: 10px 40px;
+    border-radius: 30px;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    
+}
+
+.team-secondary .btn-outline-light:hover
+{
+    color: #5a10fb;
+    border-collapse: #5a10fb;
+}
+
+
+
+/*************************************\
+    @ news
+\*************************************/
+
+.news
+{
+    
+}
+
+.news .card
+{
+    border: none;
+    margin-bottom: 2rem;
+}
+
+.news .card-body
+{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.news .card-body .controls
+{
+    font-size: .75rem;
+    color: #555;
+}
+
+.news .card-title a
+{
+    color: #333;
+    text-decoration: none;
+    transition: all 0.4s ease-in-out;
+}
+
+.news .card-title a:hover
+{
+    color: #5a10fb;
+}
+
+/*************************************\
+    @ contact
+\*************************************/
+
+.contact
+{
+    
+}
+
+.contact form input[type=text],
+.contact form input[type=email],
+.contact form input[type=password],
+.contact form textarea
+{
+    border: none;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.contact form textarea:focus
+{
+    outline: 0;
+    border: none;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.contact form .btn
+{
+    background-color: #5a10fb;
+    color: #fff;
+    padding: 10px 50px;
+    text-transform: capitalize;
+    transition: all 0.4s ease-in-out;
+}
+
+.contact form .btn:hover,
+.contact .socials i:hover
+{
+    background-color: #333;
+    cursor: pointer;
+}
+
+.contact .media
+{
+    align-items: baseline;
+}
+
+.contact .media i
+{
+    color: #5a10fb;
+}
+
+.contact .media .media-body address
+{
+    color: #666;
+    letter-spacing: 2px;
+    line-height: 1.8;
+}
+
+.contact .socials
+{
+    margin-top: 1.5rem;
+}
+
+.contact .socials i
+{
+    background-color: #5a10fb;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #fff;
+    font-size: 25px;
+    border-radius: 50%;
+    transition: all 0.4s ease-in-out;
+}
+
+
+::-webkit-input-placeholder
+{ /* Chrome/Opera/Safari */
+    color: #aaa !important;
+}
+::-moz-placeholder
+{ /* Firefox 19+ */
+    color: #aaa !important;
+}
+:-ms-input-placeholder
+{ /* IE 10+ */
+    color: #aaa !important;
+}
+:-moz-placeholder
+{ /* Firefox 18- */
+    color: #aaa !important;
+}
+
+
+/*************************************\
+    @ footer
+\*************************************/
+
+footer
+{
+    background-color: #5a10fb;
+    color: #fff;
+    padding: 30px 15px;
+    text-align: center;
+}
+
+footer i
+{
+    color: #d10505
+}
+
+footer span
+{
+    font-weight: bold;
+    color: #2e0191
+}
